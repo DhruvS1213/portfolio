@@ -93,6 +93,8 @@ body {
     }
 }
 
+
+
 // No JS styles
 .no-js {
     #experience-timeline {
@@ -646,6 +648,7 @@ footer {
 
 .project-image {
     float: left;
+    width: 300px;
 }
 
 .project-info {
@@ -725,7 +728,7 @@ footer {
     max-width: 500px;
     margin: 0 auto;
 
-    input, textarea {
+    input, textarea, .chatbox {
         display: block;
         width: 100%;
         padding: 10px;
@@ -930,4 +933,34 @@ footer {
         }
     }
 
+}
+
+// .nameIntro{
+//     font-family: 'Lato', sans-serif;
+//     font-size: 30px;
+//     color: white;
+// }
+
+.nameIntro{
+    color: white !important;
+}
+
+.workIntro {
+    color: white;
+}
+
+#download-resume-button {
+    visibility: hidden;
+}
+
+.typed-cursor{
+    opacity: 0;
+}
+
+.chatbox {
+    text-align: left;
+}
+
+.uchat{
+    text-align: right
 }

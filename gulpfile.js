@@ -7,7 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var connect = require('gulp-connect');
 
 gulp.task('scripts', function() {
-    return gulp.src('js/scripts.js')
+    return gulp.src('js/*.js')
         .pipe(plumber(plumber({
             errorHandler: function (err) {
                 console.log(err);
@@ -18,7 +18,7 @@ gulp.task('scripts', function() {
             preserveComments: 'license'
         }))
         .pipe(rename({extname: '.min.js'}))
-        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('prod/js'));
 });
 
 gulp.task('html', function() {
@@ -38,7 +38,7 @@ gulp.task('styles', function() {
         })))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('prod/css'));
 });
 
 gulp.task('connect', function() {

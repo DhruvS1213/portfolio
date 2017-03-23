@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Dhruv Shah</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="prod/css/bootstrap.min.css" rel="stylesheet">
+    <link href="prod/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,8 +37,8 @@
             <li>
                 <a href="#skills">Skills</a>
             </li>
-            <li>
-                <a href="#contact">Contact</a>
+            <li onclick="startChat()">
+                <a  href="#contact">Contact</a>
             </li>
         </ul>
     </header>
@@ -46,9 +46,9 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Dhruv Shah</h1>
-            <h2>Software Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <div style="position: relative; top: -10px;"><h2 class="nameIntro" style="display:inline; font-weight: 700; font-family: 'Montserrat', sans-serif"></h2></div>
+            <div><h2 class="workIntro" style="display:inline"s></h2></div>
+            <div style="visibility: hidden; padding-top: 10px;" id="download-resume-button"><a href="#"  class="btn-rounded-white">Download Resume</a></div>
         </div>
         <!-- End #lead-content -->
 
@@ -71,9 +71,7 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+
                     </p>
                 </div>
             </div>
@@ -82,7 +80,7 @@
     <!-- End #about -->
 
     <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
+        <h2 class="heading"><img src="images/job-icon.png" style="width: 30px; height: 30px"> Experience</h2>
         <div id="experience-timeline">
             <div data-date="June 2016 – Present">
                 <h3>Tata Consultancy Services - Digital Enterprise Services and Solutions</h3>
@@ -105,52 +103,58 @@
     <!-- End #experience -->
 
     <div id="education">
-        <h2 class="heading">Education</h2>
+        <h2 class="heading"><img src="images/education-icon.png" style="width: 40px; height: 40px"> Education</h2>
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>Dhirubhai Ambani Institute of Information and Communication Technology</h3>
+            <span class="education-date">July 2014 - June 2016</span>
+            <h4>Master of Technology in Machine Learning</h4>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                During my master's program, I developed an inclination for mathematical modelling of real world problems. My specialization was
+                in Machine Learning domain and as a part of my curriculum, I got a chance to perform research in Recommender Systems. I was
+                exposed to linear algebra and its applications while undergoing this program.
             </p>
         </div>
         <!-- End .education-block -->
 
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul>
+            <h3>University of Pune</h3>
+            <span class="education-date">July 2009 - June 2013</span>
+            <h4>Bachelor of Engineering in Electronics and Telecommunication</h4>
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="education-block">
+            <h3>Gujarat State Education Board</h3>
+            <span class="education-date">June 2007 - May 2009</span>
+            <h4>Higher Secondary Education</h4>
+            <p>
+                
+            </p>
         </div>
         <!-- End .education-block -->
     </div>
     <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+        <h2 class="heading"><img src="images/project-icon.png" style="width: 40px; height: 40px"> Projects</h2>
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/recommender-system-project.jpg" style="width: 300px" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Course Recommender System</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            An exhaustive study of Recommendation Algorithms using Collaborative Filtering
+                            approach and regularization approaches involved with the problem. A proposal for
+                            improvement of the algorithm’s performance along with a case study for Course
+                            Recommender Systems.
                         </p>
-                        <a href="#">View Project</a>
+                        <!--<a href="#">View Project</a>-->
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -158,19 +162,40 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/drowsiness-project.jpg" style="width: 320px" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>An Effective Algorithm for Drowsiness Detection using EEG Signals and Fuzzy Logic</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            This project is based on developing an algorithm for detecting drowsiness of a person
+                            based on his/her, EEG Signals. Fuzzy logic was employed in developing this algorithm since EEG Signals
+                            can contain mixed frequencies for extent of drowsiness and thus a threshold was required to false detection.
                         </p>
-                        <a href="#">View Project</a>
+                        <!--<a href="#">View Project</a>-->
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/robotic-arm-project.jpg" style="width: 300px" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Automated Pick and Place Robotic Arm</h3>
+                        <p>
+                            This project involved developing a robotic arm with the idea of automating tasks in
+                            industry where, human hands cannot be used. The accuracy and speed of operation
+                            were achieved by using stepper motors, which makes it very reliable for use.
+                        </p>
+                        <!--<a href="#">View Project</a>-->
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
             </div>
         </div>
     </div>
@@ -179,42 +204,65 @@
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
+            <li>HTML 5</li>
+            <li>CSS 3</li>
             <li>JavaScript</li>
             <li>Python</li>
-            
-            
+            <li>JQuery</li>
             <li>Node.js</li>
             <li>AngularJs</li>
-           
-           
             <li>Java</li>
             <li>C</li>
-            
-            
+            <li>Cordova</li>
+            <li>Ionic</li> 
+            <li>iOS Programming</li>
+            <li>MongoDb</li>
+            <li>Firebase</li>
+            <li>Amazon Web Services</li>
+            <li>Matlab</li>
+            <li>Machine Learning</li>
         </ul>
     </div>
     <!-- End #skills -->
 
-    <div id="contact">
+    <!--<div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
+            <form method="POST" action="https://formspree.io/dhruv.shah@gmail.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
                 <button type="submit">Send</button>
             </form>
-        </div>
+        </div>-->
         <!-- End #contact-form -->
-    </div>
+    <!--</div>-->
     <!-- End #contact -->
+
+    <div id="contact">
+        <h2 class="heading">Contact</h2>
+        <div id="contact-form">
+            <p class="chatbox chat1"></p>
+            <p class="chatbox uchat" id="umsg2"></p>
+            <p class="chatbox chat2"></p>
+            <p class="chatbox uchat" id="umsg3"></p>
+            <p class="chatbox chat3"></p>
+            <p class="chatbox uchat" id="umsg4"></p>
+            <p class="chatbox chat4"></p> 
+            <br />
+            
+            <input id="userInput" placeholder="Enter your text here" />
+            <button onclick = "startChat()" id="chatSend"></button>
+        </div>
+        
+    </div>
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017 YOUR NAME
+                        Copyright &copy; 2017 DHRUV SHAH
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -225,16 +273,16 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/DhruvS1213" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                            <a href="https://stackoverflow.com/users/7743705 " target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/dhruv.shah37" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/iDhruvS" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -246,8 +294,10 @@
     </footer>
     <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="prod/js/jquery.min.js"></script>
+    <script src="prod/js/scripts.min.js"></script>
+    <script src="prod/js/typed.min.js"></script>
+    <script src="prod/js/index.min.js"></script>
 </body>
 
 </html>
