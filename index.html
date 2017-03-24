@@ -37,8 +37,9 @@
             <li>
                 <a href="#skills">Skills</a>
             </li>
-            <li onclick="startChat()">
-                <a  href="#contact">Contact</a>
+            <li onclick="openModal()">
+                <a>Contact</a>
+                <!--href="#contact"-->
             </li>
         </ul>
     </header>
@@ -239,23 +240,64 @@
     <!--</div>-->
     <!-- End #contact -->
 
-    <div id="contact">
+    <!--<div id="contact">
         <h2 class="heading">Contact</h2>
         <div id="contact-form">
-            <p class="chatbox chat1"></p>
-            <p class="chatbox uchat" id="umsg2"></p>
-            <p class="chatbox chat2"></p>
-            <p class="chatbox uchat" id="umsg3"></p>
-            <p class="chatbox chat3"></p>
-            <p class="chatbox uchat" id="umsg4"></p>
-            <p class="chatbox chat4"></p> 
             <br />
             
             <input id="userInput" placeholder="Enter your text here" />
-            <button onclick = "startChat()" id="chatSend"></button>
+            <button onclick = "chat()" id="chatSend"></button>
+            
         </div>
         
+    </div>-->
+    <button onclick = "openModal()" id="modalButton">Open Modal</button>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h2>Contact</h2>
+            </div>
+            <div class="modal-body">
+                
+                 <div id="contact">
+                     <div id="chatPrimaryInformation">
+                        <p>I have developed an interactive system to contact you. Please leave your mess </p>
+                        <button onclick="chat()" class="chatButton">Start Conversation</button>
+                    </div>
+                    <!--<h2 class="heading">Contact</h2>-->
+                    <div id="contact-form">
+                        
+                        <!--<p class="chatbox chat1"></p>
+                        <p class="chatbox uchat" id="umsg2"></p>
+                        <p class="chatbox chat2"></p>
+                        <p class="chatbox uchat" id="umsg3"></p>
+                        <p class="chatbox chat3"></p>
+                        <p class="chatbox uchat" id="umsg4"></p>
+                        <p class="chatbox chat4"></p> -->
+                        <br />
+                        <!--<button onclick = "chat()" id="chatSend">Start Chat</button>-->
+                    </div>
+                    <div id="inputSection">
+                        <input id="userInput" placeholder="Enter your text here">
+                        <button onclick = "chat()" id="chatSend"></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--<div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>-->
+        </div>
     </div>
+
+    <div style="visibility: hidden">
+    <form method="POST" id="contactForm" action="http://formspree.io/dhruv.shah4192@gmail.com">
+        <input id="uemail" type="email" name="email" placeholder="Your email">
+        <textarea id="umessage" name="message" placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+    </form>
 
     <footer>
         <div class="container">
@@ -291,13 +333,19 @@
                 </div>
             </div>
         </div>
+
+    
+
     </footer>
     <!-- End footer -->
 
     <script src="prod/js/jquery.min.js"></script>
-    <script src="prod/js/scripts.min.js"></script>
+    <!--<script src="prod/js/scripts.min.js"></script>-->
+    <script src="js/scripts.js"></script>
     <script src="prod/js/typed.min.js"></script>
-    <script src="prod/js/index.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
+
 </body>
 
 </html>
